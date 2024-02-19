@@ -3,8 +3,12 @@ server:
 
 spring:
   application:
-    name: TaskService
-  jpa:
+    name: TaskModule
     generate-ddl: false
     hibernate:
       ddl-auto: none
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics,prometheus
